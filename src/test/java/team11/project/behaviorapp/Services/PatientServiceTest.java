@@ -26,12 +26,12 @@ public class PatientServiceTest extends AbstractTest {
     @Autowired
     private PatientService patientService;
 
-    // Test to verify that there are 2 records in the patients table, indicating that the findall query in the service should only return 12 records/patients.
+    // Test to verify that there are 12 records in the patients table, indicating that the findall query in the service should only return 12 records/patients.
     @Test
     public void getAllPatients() throws Exception {
         List<Patient> list = patientService.getAllPatients();
 
-        Assert.assertEquals("Expected size should be 2 to match the same amount of records available in the database", 2, list.size());
+        Assert.assertEquals("Expected size should be 12 to match the same amount of records available in the database", 12, list.size());
     }
 
     @Test
@@ -53,12 +53,12 @@ public class PatientServiceTest extends AbstractTest {
     // and checks the size of the resultset which should be one, since there is only one Sam in the DB
     @Test
     public void getPatientByName() throws Exception{
-        List<Patient> recordEntry = patientService.getPatientByName("John");
+        List<Patient> recordEntry = patientService.getPatientByName("Sam");
 
         assertThat(recordEntry.size(), is(1));
         assertThat(recordEntry.get(0), allOf(
-                hasProperty("firstname", is("John")),
-                hasProperty("lastname", is("Doe"))
+                hasProperty("firstname", is("Sam")),
+                hasProperty("lastname", is("Jones"))
 
                 ));
 

@@ -33,18 +33,22 @@ public class MissedActivityLoggerTest extends AbstractTest {
 
     // A test to verify that the Cron trigger does indeed work on the schedule i have set it to
     @Test
-    public void testScheduler(){
+    public void cronTest(){
         // import the cron scheduler
         org.springframework.scheduling.support.CronTrigger trigger =
                 // Setting it to run at every minute of every hour of everyday ....
                 new CronTrigger("0 0/1 * * * *");
+
         // Use the calendar to set the days
         Calendar today = Calendar.getInstance();
-        today.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
+        today.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
 
         SimpleDateFormat df = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss EEEE");
+
         final Date yesterday = today.getTime();
+
         logger.info("Last Execution : " + df.format(yesterday));
+
         Date nextExecutionTime = trigger.nextExecutionTime(
                 new TriggerContext() {
 
