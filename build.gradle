@@ -52,3 +52,9 @@ dependencies {
 bootRun {
 	addResources = true
 }
+
+springBoot {
+	executable = true
+}
+
+
