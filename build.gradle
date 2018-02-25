@@ -26,6 +26,8 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok:1.16.18'
 
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile files(org.gradle.internal.jvm.Jvm.current().toolsJar)
+
 	//compile('org.springframework.boot:spring-boot-starter-data-rest')
 	//compile('org.springframework.boot:spring-boot-starter-hateoas')
 	compile('org.springframework.boot:spring-boot-starter-jdbc')
