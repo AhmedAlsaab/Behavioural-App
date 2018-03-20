@@ -14,7 +14,7 @@ USE `behaviourdb` ;
 -- -----------------------------------------------------
 -- Table `behaviourdb`.`GPs`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `behaviourdb`.`GPs` (
+CREATE TABLE IF NOT EXISTS `behaviourdb`.`gps` (
   `gp_id` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(5) NOT NULL,
   `first_name` VARCHAR(45) NOT NULL,
@@ -32,10 +32,10 @@ CREATE TABLE IF NOT EXISTS `behaviourdb`.`patients` (
   `last_name` VARCHAR(45) NOT NULL,
   `gp_ID` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_patients_GPs_idx` (`gp_ID` ASC),
-  CONSTRAINT `fk_patients_GPs`
+  INDEX `fk_patients_gps_idx` (`gp_ID` ASC),
+  CONSTRAINT `fk_patients_gps`
     FOREIGN KEY (`gp_ID`)
-    REFERENCES `behaviourdb`.`GPs` (`gp_id`)
+    REFERENCES `behaviourdb`.`gps` (`gp_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
