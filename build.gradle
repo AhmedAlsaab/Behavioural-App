@@ -59,6 +59,8 @@ springBoot {
 	executable = true
 }
 
+project.buildDir = 'Y2_Behaviour_11'
+
 pmd {
 	ignoreFailures=true
 	pmdTest.enabled=true
