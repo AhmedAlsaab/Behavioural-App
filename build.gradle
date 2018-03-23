@@ -85,4 +85,11 @@ pmd {
 	]
 }
 
+test {
+	testLogging.showStandardStreams = true
+
+
+}
+
+
 
