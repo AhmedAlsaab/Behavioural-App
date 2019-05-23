@@ -1,16 +1,16 @@
-SCRIPT)
+## SCRIPT
 
 The Schema and the population script are in one file called "Group_11_Schema_and_Script", perform a runall in your SQL
 WorkBench and you should be good to go. Due to a small set of tables and sample data the order has already been established and there are
 no further instructions to follow.
 
 
-RUN)
+## RUN
 
 When running through boot-run you might be prompted with a "cannot establish database" error -> Please clean/build or rebuild through
 Gradle and then run the main class so that the database driver gets picked up. 
 
-TESTS)
+## UNIT TESTS
 
 I have pulled down the project a few times to ensure it all works and it does. There are three unit tests that test out
 different components:
@@ -30,8 +30,9 @@ different components:
 			notifications for the same activity to appear at the end-point which would be a problem.
 
 
-PAGE URL)
-				 http://localhost:8080/patient/1/index 
+## Checking it works
+
+			Access:	 http://localhost:8080/patient/1/index 
 	
 The above URL is the starting point for the web app. 1 is the pathvariable for the patient id. The data presented belong to that patient. You can
 change it to a 2 as well to see the different data for patient 2. 
